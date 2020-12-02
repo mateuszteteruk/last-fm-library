@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Last.fm Library"
+rootProject.name = "lastfm-library"
