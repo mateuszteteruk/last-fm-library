@@ -1,16 +1,16 @@
 package pl.mateuszteteruk.lastfmlibrary.recenttracks.domain
 
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.dto.RecentTrackDto
-import retrofit2.http.GET
-import retrofit2.http.Query
+import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.repository.RecentTracksRepository
+import javax.inject.Inject
 
-interface GetRecentTracks {
+class GetRecentTracks @Inject constructor(
+    private val recentTracksRepository: RecentTracksRepository
+) {
 
-    @GET("?method=user.getRecentTracks&format=json")
-    suspend fun getRecentTracks(
-        @Query("user") user: String,
-        @Query("api_key") apiKey: String,
-        @Query("limit") limit: Int = 15
-    ): RecentTrackDto
-
+    suspend fun execute(
+        user: String = "",
+        limit: Int = 15,
+        apiKey: String = ""
+    ): RecentTrackDto = recentTracksRepository.getRecentTracks(user = user, limit = limit, apiKey = apiKey)
 }

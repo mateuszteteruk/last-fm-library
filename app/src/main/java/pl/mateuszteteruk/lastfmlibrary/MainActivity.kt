@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
         Timber.d("Hello")
+        viewModel.get()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

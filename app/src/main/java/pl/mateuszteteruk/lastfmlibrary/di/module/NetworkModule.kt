@@ -6,7 +6,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import pl.mateuszteteruk.lastfmlibrary.recenttracks.domain.GetRecentTracks
+import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.api.RecentTracksService
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
@@ -33,6 +33,6 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideGetRecentTracks(retrofit: Retrofit): GetRecentTracks = retrofit.create(GetRecentTracks::class.java)
+    fun provideRecentTracksService(retrofit: Retrofit): RecentTracksService = retrofit.create(RecentTracksService::class.java)
 
 }
