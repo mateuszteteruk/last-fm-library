@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -45,7 +46,10 @@ dependencies {
 
     implementation deps.timber
     implementation deps.moshi
+    implementation deps.moshiConverter
     implementation deps.okhttp
+    implementation deps.okhttpLoggingInterceptor
     implementation deps.retrofit
 
+    kapt deps.moshiKotlinCodegen
 }

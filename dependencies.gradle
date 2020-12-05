@@ -19,6 +19,10 @@ deps.androidx = androidx
 deps.timber = "com.jakewharton.timber:timber:${versions.timber}"
 deps.retrofit = "com.squareup.retrofit2:retrofit:${versions.retrofit}"
 deps.moshi = "com.squareup.moshi:moshi:${versions.moshi}"
+deps.moshiKotlin = "com.squareup.moshi:moshi-kotlin:${versions.moshi}"
+deps.moshiKotlinCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${versions.moshi}"
+deps.moshiConverter = "com.squareup.retrofit2:converter-moshi:${versions.retrofit}"
 deps.okhttp = "com.squareup.okhttp3:okhttp:${versions.okhttp}"
+deps.okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}"
 
 ext.deps = deps
