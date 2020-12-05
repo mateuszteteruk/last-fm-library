@@ -6,6 +6,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import pl.mateuszteteruk.lastfmlibrary.recenttracks.domain.GetRecentTracks
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
@@ -29,5 +30,9 @@ object NetworkModule {
             .baseUrl("https://ws.audioscrobbler.com/2.0/")
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
+
+    @Singleton
+    @Provides
+    fun provideGetRecentTracks(retrofit: Retrofit): GetRecentTracks = retrofit.create(GetRecentTracks::class.java)
 
 }
