@@ -1,0 +1,19 @@
+def deps = [:]
+
+def kotlin = [:]
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+kotlin.stdLib = "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}"
+deps.kotlin = kotlin
+
+deps.gradlePlugin = "com.android.tools.build:gradle:${versions.gradlePlugin}"
+
+def androidx = [:]
+androidx.core = "androidx.core:core-ktx:${versions.core}"
+androidx.appcompat = "androidx.appcompat:appcompat:${versions.appcompat}"
+androidx.material = "com.google.android.material:material:${versions.material}"
+androidx.constraint = "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}"
+androidx.navigationUi = "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+androidx.navigationFragment = "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
+deps.androidx = androidx
+
+ext.deps = deps
