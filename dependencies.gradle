@@ -16,4 +16,9 @@ androidx.navigationUi = "androidx.navigation:navigation-ui-ktx:${versions.naviga
 androidx.navigationFragment = "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
 deps.androidx = androidx
 
+deps.timber = "com.jakewharton.timber:timber:${versions.timber}"
+deps.retrofit = "com.squareup.retrofit2:retrofit:${versions.retrofit}"
+deps.moshi = "com.squareup.moshi:moshi:${versions.moshi}"
+deps.okhttp = "com.squareup.okhttp3:okhttp:${versions.okhttp}"
+
 ext.deps = deps

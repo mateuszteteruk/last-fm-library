@@ -43,4 +43,9 @@ dependencies {
     implementation deps.androidx.navigationUi
     implementation deps.androidx.navigationFragment
 
+    implementation deps.timber
+    implementation deps.moshi
+    implementation deps.okhttp
+    implementation deps.retrofit
+
 }
