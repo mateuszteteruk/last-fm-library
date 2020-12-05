@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+
 
 android {
     compileSdkVersion 29
@@ -45,11 +47,15 @@ dependencies {
     implementation deps.androidx.navigationFragment
 
     implementation deps.timber
-    implementation deps.moshi
-    implementation deps.moshiConverter
-    implementation deps.okhttp
-    implementation deps.okhttpLoggingInterceptor
-    implementation deps.retrofit
 
-    kapt deps.moshiKotlinCodegen
+    implementation deps.network.moshi
+    implementation deps.network.moshiConverter
+    implementation deps.network.okhttp
+    implementation deps.network.okhttpLoggingInterceptor
+    implementation deps.network.retrofit
+
+    implementation deps.hilt.hilt
+
+    kapt deps.network.moshiKotlinCodegen
+    kapt deps.hilt.compiler
 }
