@@ -1,34 +1,32 @@
-package pl.mateuszteteruk.lastfmlibrary.recenttracks.domain
+package pl.mateuszteteruk.lastfmlibrary.toptracks.domain
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.AttrDto
-import pl.mateuszteteruk.lastfmlibrary.core.entity.Album
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Artist
-import pl.mateuszteteruk.lastfmlibrary.core.entity.Date
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Description
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Image
-import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.dto.TrackDto
-import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.repository.RecentTracksRepository
-import pl.mateuszteteruk.lastfmlibrary.recenttracks.entity.RecentTrack
-import pl.mateuszteteruk.lastfmlibrary.recenttracks.entity.RecentTracks
+import pl.mateuszteteruk.lastfmlibrary.toptracks.dataaccess.dto.TopTrackDto
+import pl.mateuszteteruk.lastfmlibrary.toptracks.dataaccess.repository.TopTracksRepository
+import pl.mateuszteteruk.lastfmlibrary.toptracks.entity.TopTrack
+import pl.mateuszteteruk.lastfmlibrary.toptracks.entity.TopTracks
 import javax.inject.Inject
 import javax.inject.Named
 
-class GetRecentTracks @Inject constructor(
-    private val recentTracksRepository: RecentTracksRepository,
+class GetTopTracks @Inject constructor(
+    private val topTracksRepository: TopTracksRepository,
     @Named("user") private val user: String
 ) {
 
     suspend fun execute(
         limit: Int = 15
-    ): RecentTracks = withContext(Dispatchers.IO) {
-        val (attrDto, tracksDto) = recentTracksRepository.getRecentTracks(
+    ): TopTracks = withContext(Dispatchers.IO) {
+        val (attrDto, tracksDto) = topTracksRepository.getTopTracks(
             user = user,
             limit = limit
-        ).recentTracks
+        ).topTracks
 
-        RecentTracks(
+        TopTracks(
             description = mapDescription(attrDto),
             tracks = mapTracks(tracksDto)
         )
@@ -42,21 +40,19 @@ class GetRecentTracks @Inject constructor(
             totalPages = attrDto.totalPages
         )
 
-    private fun mapTracks(tracksDto: List<TrackDto>): List<RecentTrack> =
+    private fun mapTracks(tracksDto: List<TopTrackDto>): List<TopTrack> =
         tracksDto.map { trackDto ->
-            RecentTrack(
-                artist = Artist(trackDto.artist.text),
-                album = Album(trackDto.album.text),
+            TopTrack(
+                rank = trackDto.rank.rank,
+                artist = Artist(name = trackDto.artist.name, url = trackDto.artist.url),
                 name = trackDto.name,
-                isNowPlaying = trackDto.nowPlaying?.nowplaying?.equals("true") ?: false,
                 url = trackDto.url,
                 images = trackDto.images.map { imageDto ->
                     Image(
                         type = Image.Type.resolve(imageDto.size),
                         url = imageDto.text
                     )
-                },
-                date = trackDto.date?.uts?.let { Date(utc = it) }
+                }
             )
         }
 }

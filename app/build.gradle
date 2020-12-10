@@ -4,6 +4,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'dagger.hilt.android.plugin'
 
+def loadLocalProperty(String property) {
+    def localProperties = new Properties()
+    localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+    return localProperties[property]
+}
 
 android {
     compileSdkVersion 29
@@ -16,6 +21,7 @@ android {
         versionCode 1
         versionName "1.0"
 
+        buildConfigField "String", "LASTFM_API_KEY", "\"${loadLocalProperty("lastfm_api_key")}\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

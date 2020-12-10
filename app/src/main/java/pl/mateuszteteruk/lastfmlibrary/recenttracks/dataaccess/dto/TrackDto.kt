@@ -1,7 +1,10 @@
-package pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto
+package pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.dto
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.AlbumDto
+import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.DateDto
+import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.ImageDto
 
 @JsonClass(generateAdapter = true)
 data class TrackDto(

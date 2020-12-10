@@ -6,7 +6,9 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.api.RequestInterceptor
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.api.RecentTracksService
+import pl.mateuszteteruk.lastfmlibrary.toptracks.dataaccess.api.TopTracksService
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
@@ -20,6 +22,7 @@ object NetworkModule {
     fun provideOkHttpClient(): OkHttpClient =
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+            .addInterceptor(RequestInterceptor())
             .build()
 
     @Singleton
@@ -34,5 +37,9 @@ object NetworkModule {
     @Singleton
     @Provides
     fun provideRecentTracksService(retrofit: Retrofit): RecentTracksService = retrofit.create(RecentTracksService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideTopTracksService(retrofit: Retrofit): TopTracksService = retrofit.create(TopTracksService::class.java)
 
 }
