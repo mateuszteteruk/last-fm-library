@@ -8,8 +8,12 @@ ext.versions = [
         'appcompat'       : '1.2.0',
         'material'        : '1.2.1',
         'constraintLayout': '2.0.4',
-        'navigation'      : '2.3.2'
-
+        'navigation'      : '2.3.2',
+        'timber'          : '4.7.1',
+        'moshi'           : '1.11.0',
+        'retrofit'        : '2.9.0',
+        'okhttp'          : '4.9.0',
+        'hilt'            : '2.28-alpha'
 ]
 ext.names = [
         'applicationId': 'pl.mateuszteteruk.lastfmlibrary'

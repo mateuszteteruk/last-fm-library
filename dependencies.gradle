@@ -16,4 +16,22 @@ androidx.navigationUi = "androidx.navigation:navigation-ui-ktx:${versions.naviga
 androidx.navigationFragment = "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
 deps.androidx = androidx
 
+deps.timber = "com.jakewharton.timber:timber:${versions.timber}"
+
+def network = [:]
+network.retrofit = "com.squareup.retrofit2:retrofit:${versions.retrofit}"
+network.moshi = "com.squareup.moshi:moshi:${versions.moshi}"
+network.moshiKotlin = "com.squareup.moshi:moshi-kotlin:${versions.moshi}"
+network.moshiKotlinCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${versions.moshi}"
+network.moshiConverter = "com.squareup.retrofit2:converter-moshi:${versions.retrofit}"
+network.okhttp = "com.squareup.okhttp3:okhttp:${versions.okhttp}"
+network.okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}"
+deps.network = network
+
+def hilt = [:]
+hilt.plugin = "com.google.dagger:hilt-android-gradle-plugin:${versions.hilt}"
+hilt.hilt = "com.google.dagger:hilt-android:${versions.hilt}"
+hilt.compiler = "com.google.dagger:hilt-android-compiler:${versions.hilt}"
+deps.hilt = hilt
+
 ext.deps = deps

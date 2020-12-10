@@ -12,6 +12,7 @@ buildscript {
     dependencies {
         classpath deps.gradlePlugin
         classpath deps.kotlin.plugin
+        classpath deps.hilt.plugin
     }
 }
 
