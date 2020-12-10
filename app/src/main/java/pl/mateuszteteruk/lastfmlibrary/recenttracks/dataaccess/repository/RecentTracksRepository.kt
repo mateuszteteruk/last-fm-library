@@ -10,7 +10,6 @@ class RecentTracksRepository @Inject constructor(
 
     suspend fun getRecentTracks(
         user: String,
-        limit: Int,
-        apiKey: String
-    ): RecentTrackWrapperDto = recentTracksService.getRecentTracks(user = user, apiKey = apiKey, limit = limit)
+        limit: Int
+    ): RecentTrackWrapperDto = recentTracksService.getRecentTracks(user = user, limit = limit)
 }

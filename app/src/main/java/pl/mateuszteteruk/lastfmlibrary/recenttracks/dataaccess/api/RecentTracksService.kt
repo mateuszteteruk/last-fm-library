@@ -9,7 +9,6 @@ interface RecentTracksService {
     @GET("?method=user.getRecentTracks&format=json")
     suspend fun getRecentTracks(
         @Query("user") user: String,
-        @Query("api_key") apiKey: String,
         @Query("limit") limit: Int
     ): RecentTrackWrapperDto
 

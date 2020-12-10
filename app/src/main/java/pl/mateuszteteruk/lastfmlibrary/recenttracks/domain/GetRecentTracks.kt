@@ -3,12 +3,12 @@ package pl.mateuszteteruk.lastfmlibrary.recenttracks.domain
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.AttrDto
-import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.TrackDto
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Album
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Artist
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Date
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Description
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Image
+import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.dto.TrackDto
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.repository.RecentTracksRepository
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.entity.RecentTrack
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.entity.RecentTracks
@@ -20,12 +20,10 @@ class GetRecentTracks @Inject constructor(
 
     suspend fun execute(
         user: String = "",
-        limit: Int = 15,
-        apiKey: String = ""
+        limit: Int = 15
     ): RecentTracks = withContext(Dispatchers.IO) {
         val (attrDto, tracksDto) = recentTracksRepository.getRecentTracks(
             user = user,
-            apiKey = apiKey,
             limit = limit
         ).recentTracks
 

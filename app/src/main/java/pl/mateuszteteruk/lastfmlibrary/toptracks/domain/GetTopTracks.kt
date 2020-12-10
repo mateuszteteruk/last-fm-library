@@ -18,12 +18,10 @@ class GetTopTracks @Inject constructor(
 
     suspend fun execute(
         user: String = "",
-        limit: Int = 15,
-        apiKey: String = ""
+        limit: Int = 15
     ): TopTracks = withContext(Dispatchers.IO) {
         val (attrDto, tracksDto) = topTracksRepository.getTopTracks(
             user = user,
-            apiKey = apiKey,
             limit = limit
         ).topTracks
 

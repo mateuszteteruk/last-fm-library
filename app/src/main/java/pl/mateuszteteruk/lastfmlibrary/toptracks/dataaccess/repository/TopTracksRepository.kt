@@ -10,7 +10,6 @@ class TopTracksRepository @Inject constructor(
 
     suspend fun getTopTracks(
         user: String,
-        limit: Int,
-        apiKey: String
-    ): TopTracksWrapperDto = topTracksService.getTopTracks(user = user, apiKey = apiKey, limit = limit)
+        limit: Int
+    ): TopTracksWrapperDto = topTracksService.getTopTracks(user = user, limit = limit)
 }
