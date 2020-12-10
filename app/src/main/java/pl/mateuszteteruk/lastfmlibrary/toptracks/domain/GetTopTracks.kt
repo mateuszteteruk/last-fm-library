@@ -11,13 +11,14 @@ import pl.mateuszteteruk.lastfmlibrary.toptracks.dataaccess.repository.TopTracks
 import pl.mateuszteteruk.lastfmlibrary.toptracks.entity.TopTrack
 import pl.mateuszteteruk.lastfmlibrary.toptracks.entity.TopTracks
 import javax.inject.Inject
+import javax.inject.Named
 
 class GetTopTracks @Inject constructor(
-    private val topTracksRepository: TopTracksRepository
+    private val topTracksRepository: TopTracksRepository,
+    @Named("user") private val user: String
 ) {
 
     suspend fun execute(
-        user: String = "",
         limit: Int = 15
     ): TopTracks = withContext(Dispatchers.IO) {
         val (attrDto, tracksDto) = topTracksRepository.getTopTracks(
