@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
-import pl.mateuszteteruk.lastfmlibrary.topalbums.presentation.TopAlbumsViewModel
+import pl.mateuszteteruk.lastfmlibrary.topartists.presentation.TopArtistsViewModel
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -15,7 +15,7 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var viewModel: TopAlbumsViewModel
+    lateinit var viewModel: TopArtistsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -9,6 +9,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.api.RequestInterceptor
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.api.RecentTracksService
 import pl.mateuszteteruk.lastfmlibrary.topalbums.dataaccess.api.TopAlbumsService
+import pl.mateuszteteruk.lastfmlibrary.topartists.dataaccess.api.TopArtistsService
 import pl.mateuszteteruk.lastfmlibrary.toptracks.dataaccess.api.TopTracksService
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -46,5 +47,9 @@ object NetworkModule {
     @Singleton
     @Provides
     fun provideTopAlbumsService(retrofit: Retrofit): TopAlbumsService = retrofit.create(TopAlbumsService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideTopArtistsService(retrofit: Retrofit): TopArtistsService = retrofit.create(TopArtistsService::class.java)
 
 }
