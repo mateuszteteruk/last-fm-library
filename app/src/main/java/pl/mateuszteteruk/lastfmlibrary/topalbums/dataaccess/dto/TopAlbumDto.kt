@@ -2,9 +2,9 @@ package pl.mateuszteteruk.lastfmlibrary.topalbums.dataaccess.dto
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.ArtistDto
 import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.ImageDto
-import pl.mateuszteteruk.lastfmlibrary.toptracks.dataaccess.dto.ArtistDto
-import pl.mateuszteteruk.lastfmlibrary.toptracks.dataaccess.dto.RankDto
+import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.RankDto
 
 @JsonClass(generateAdapter = true)
 data class TopAlbumDto(
