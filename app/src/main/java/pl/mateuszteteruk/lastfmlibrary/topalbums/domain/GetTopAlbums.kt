@@ -2,9 +2,8 @@ package pl.mateuszteteruk.lastfmlibrary.topalbums.domain
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.AttrDto
+import pl.mateuszteteruk.lastfmlibrary.core.domain.BaseGetData
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Artist
-import pl.mateuszteteruk.lastfmlibrary.core.entity.Description
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Image
 import pl.mateuszteteruk.lastfmlibrary.core.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.topalbums.dataaccess.dto.TopAlbumDto
@@ -15,9 +14,9 @@ import javax.inject.Inject
 
 class GetTopAlbums @Inject constructor(
     private val topAlbumsRepository: TopAlbumsRepository
-) {
+) : BaseGetData<TopAlbums>() {
 
-    suspend fun execute(
+    override suspend fun execute(
         requestData: RequestData
     ): TopAlbums = withContext(Dispatchers.IO) {
         val (attrDto, albumsDto) = topAlbumsRepository.getTopAlbums(
@@ -29,14 +28,6 @@ class GetTopAlbums @Inject constructor(
             albums = mapAlbums(albumsDto)
         )
     }
-
-    private fun mapDescription(attrDto: AttrDto): Description =
-        Description(
-            total = attrDto.total,
-            page = attrDto.page,
-            perPage = attrDto.perPage,
-            totalPages = attrDto.totalPages
-        )
 
     private fun mapAlbums(albumsDto: List<TopAlbumDto>): List<TopAlbum> =
         albumsDto.map { albumDto ->

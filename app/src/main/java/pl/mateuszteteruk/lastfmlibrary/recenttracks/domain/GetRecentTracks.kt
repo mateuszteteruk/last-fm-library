@@ -2,11 +2,10 @@ package pl.mateuszteteruk.lastfmlibrary.recenttracks.domain
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.AttrDto
+import pl.mateuszteteruk.lastfmlibrary.core.domain.BaseGetData
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Album
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Artist
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Date
-import pl.mateuszteteruk.lastfmlibrary.core.entity.Description
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Image
 import pl.mateuszteteruk.lastfmlibrary.core.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.dto.TrackDto
@@ -17,9 +16,9 @@ import javax.inject.Inject
 
 class GetRecentTracks @Inject constructor(
     private val recentTracksRepository: RecentTracksRepository
-) {
+) : BaseGetData<RecentTracks>() {
 
-    suspend fun execute(
+    override suspend fun execute(
         requestData: RequestData
     ): RecentTracks = withContext(Dispatchers.IO) {
         val (attrDto, tracksDto) = recentTracksRepository.getRecentTracks(
@@ -31,14 +30,6 @@ class GetRecentTracks @Inject constructor(
             tracks = mapTracks(tracksDto)
         )
     }
-
-    private fun mapDescription(attrDto: AttrDto): Description =
-        Description(
-            total = attrDto.total,
-            page = attrDto.page,
-            perPage = attrDto.perPage,
-            totalPages = attrDto.totalPages
-        )
 
     private fun mapTracks(tracksDto: List<TrackDto>): List<RecentTrack> =
         tracksDto.map { trackDto ->
