@@ -5,6 +5,7 @@ import kotlinx.coroutines.withContext
 import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.AttrDto
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Description
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Image
+import pl.mateuszteteruk.lastfmlibrary.core.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.topartists.dataaccess.dto.TopArtistDto
 import pl.mateuszteteruk.lastfmlibrary.topartists.dataaccess.repository.TopArtistsRepository
 import pl.mateuszteteruk.lastfmlibrary.topartists.entity.TopArtist
@@ -16,10 +17,10 @@ class GetTopArtists @Inject constructor(
 ) {
 
     suspend fun execute(
-        limit: Int = 15
+        requestData: RequestData
     ): TopArtists = withContext(Dispatchers.IO) {
         val (attrDto, artistsDto) = topArtistsRepository.getTopArtists(
-            limit = limit
+            requestData = requestData
         ).topArtists
 
         TopArtists(

@@ -1,5 +1,6 @@
 package pl.mateuszteteruk.lastfmlibrary.topartists.dataaccess.repository
 
+import pl.mateuszteteruk.lastfmlibrary.core.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.topartists.dataaccess.api.TopArtistsService
 import pl.mateuszteteruk.lastfmlibrary.topartists.dataaccess.dto.TopArtistsWrapperDto
 import javax.inject.Inject
@@ -11,6 +12,11 @@ class TopArtistsRepository @Inject constructor(
 ) {
 
     suspend fun getTopArtists(
-        limit: Int
-    ): TopArtistsWrapperDto = topArtistsService.getTopArtists(user = user, limit = limit)
+        requestData: RequestData
+    ): TopArtistsWrapperDto = topArtistsService.getTopArtists(
+        user = user,
+        limit = requestData.perPage,
+        page = requestData.page,
+        period = requestData.period.key
+    )
 }
