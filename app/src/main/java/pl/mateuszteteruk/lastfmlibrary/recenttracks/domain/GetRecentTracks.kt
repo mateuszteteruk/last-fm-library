@@ -8,6 +8,7 @@ import pl.mateuszteteruk.lastfmlibrary.core.entity.Artist
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Date
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Description
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Image
+import pl.mateuszteteruk.lastfmlibrary.core.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.dto.TrackDto
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.repository.RecentTracksRepository
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.entity.RecentTrack
@@ -19,10 +20,10 @@ class GetRecentTracks @Inject constructor(
 ) {
 
     suspend fun execute(
-        limit: Int = 15
+        requestData: RequestData
     ): RecentTracks = withContext(Dispatchers.IO) {
         val (attrDto, tracksDto) = recentTracksRepository.getRecentTracks(
-            limit = limit
+            requestData = requestData
         ).recentTracks
 
         RecentTracks(

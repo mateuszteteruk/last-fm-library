@@ -1,5 +1,6 @@
 package pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.repository
 
+import pl.mateuszteteruk.lastfmlibrary.core.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.api.RecentTracksService
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.dto.RecentTrackWrapperDto
 import javax.inject.Inject
@@ -11,6 +12,11 @@ class RecentTracksRepository @Inject constructor(
 ) {
 
     suspend fun getRecentTracks(
-        limit: Int
-    ): RecentTrackWrapperDto = recentTracksService.getRecentTracks(user = user, limit = limit)
+        requestData: RequestData
+    ): RecentTrackWrapperDto = recentTracksService.getRecentTracks(
+        user = user,
+        limit = requestData.perPage,
+        page = requestData.page,
+        period = requestData.period.key
+    )
 }
