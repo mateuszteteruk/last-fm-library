@@ -6,6 +6,7 @@ import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.AttrDto
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Artist
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Description
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Image
+import pl.mateuszteteruk.lastfmlibrary.core.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.toptracks.dataaccess.dto.TopTrackDto
 import pl.mateuszteteruk.lastfmlibrary.toptracks.dataaccess.repository.TopTracksRepository
 import pl.mateuszteteruk.lastfmlibrary.toptracks.entity.TopTrack
@@ -17,10 +18,10 @@ class GetTopTracks @Inject constructor(
 ) {
 
     suspend fun execute(
-        limit: Int = 15
+        requestData: RequestData
     ): TopTracks = withContext(Dispatchers.IO) {
         val (attrDto, tracksDto) = topTracksRepository.getTopTracks(
-            limit = limit
+            requestData = requestData
         ).topTracks
 
         TopTracks(
