@@ -1,4 +1,4 @@
-package pl.mateuszteteruk.lastfmlibrary.toptracks.dataaccess.dto
+package pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

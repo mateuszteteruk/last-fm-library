@@ -9,7 +9,9 @@ interface TopTracksService {
     @GET("?method=user.getTopTracks&format=json")
     suspend fun getTopTracks(
         @Query("user") user: String,
-        @Query("limit") limit: Int
+        @Query("limit") limit: Int,
+        @Query("page") page: Int,
+        @Query("period") period: String,
     ): TopTracksWrapperDto
 
 }

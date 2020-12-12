@@ -3,6 +3,7 @@ package pl.mateuszteteruk.lastfmlibrary.recenttracks.presentation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
+import pl.mateuszteteruk.lastfmlibrary.core.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.domain.GetRecentTracks
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.entity.RecentTracks
 import timber.log.Timber
@@ -13,7 +14,7 @@ class RecentTracksViewModel @Inject constructor(private val getRecentTracks: Get
     fun get() {
         viewModelScope.launch {
             runCatching {
-                val recentTrack: RecentTracks = getRecentTracks.execute()
+                val recentTrack: RecentTracks = getRecentTracks.execute(RequestData())
                 Timber.d("Result: $recentTrack")
 
                 Timber.d("attr: ${recentTrack.description}")
