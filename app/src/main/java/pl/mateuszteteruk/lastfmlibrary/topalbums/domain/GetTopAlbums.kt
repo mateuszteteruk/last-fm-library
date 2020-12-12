@@ -6,6 +6,7 @@ import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.dto.AttrDto
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Artist
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Description
 import pl.mateuszteteruk.lastfmlibrary.core.entity.Image
+import pl.mateuszteteruk.lastfmlibrary.core.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.topalbums.dataaccess.dto.TopAlbumDto
 import pl.mateuszteteruk.lastfmlibrary.topalbums.dataaccess.repository.TopAlbumsRepository
 import pl.mateuszteteruk.lastfmlibrary.topalbums.entity.TopAlbum
@@ -17,10 +18,10 @@ class GetTopAlbums @Inject constructor(
 ) {
 
     suspend fun execute(
-        limit: Int = 15
+        requestData: RequestData
     ): TopAlbums = withContext(Dispatchers.IO) {
         val (attrDto, albumsDto) = topAlbumsRepository.getTopAlbums(
-            limit = limit
+            requestData = requestData
         ).topAlbums
 
         TopAlbums(
