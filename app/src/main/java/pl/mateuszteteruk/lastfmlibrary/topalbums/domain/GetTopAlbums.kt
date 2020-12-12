@@ -11,18 +11,15 @@ import pl.mateuszteteruk.lastfmlibrary.topalbums.dataaccess.repository.TopAlbums
 import pl.mateuszteteruk.lastfmlibrary.topalbums.entity.TopAlbum
 import pl.mateuszteteruk.lastfmlibrary.topalbums.entity.TopAlbums
 import javax.inject.Inject
-import javax.inject.Named
 
 class GetTopAlbums @Inject constructor(
-    private val topAlbumsRepository: TopAlbumsRepository,
-    @Named("user") private val user: String
+    private val topAlbumsRepository: TopAlbumsRepository
 ) {
 
     suspend fun execute(
         limit: Int = 15
     ): TopAlbums = withContext(Dispatchers.IO) {
         val (attrDto, albumsDto) = topAlbumsRepository.getTopAlbums(
-            user = user,
             limit = limit
         ).topAlbums
 

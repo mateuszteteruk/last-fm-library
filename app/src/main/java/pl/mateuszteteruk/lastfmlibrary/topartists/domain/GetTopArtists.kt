@@ -10,18 +10,15 @@ import pl.mateuszteteruk.lastfmlibrary.topartists.dataaccess.repository.TopArtis
 import pl.mateuszteteruk.lastfmlibrary.topartists.entity.TopArtist
 import pl.mateuszteteruk.lastfmlibrary.topartists.entity.TopArtists
 import javax.inject.Inject
-import javax.inject.Named
 
 class GetTopArtists @Inject constructor(
-    private val topArtistsRepository: TopArtistsRepository,
-    @Named("user") private val user: String
+    private val topArtistsRepository: TopArtistsRepository
 ) {
 
     suspend fun execute(
         limit: Int = 15
     ): TopArtists = withContext(Dispatchers.IO) {
         val (attrDto, artistsDto) = topArtistsRepository.getTopArtists(
-            user = user,
             limit = limit
         ).topArtists
 

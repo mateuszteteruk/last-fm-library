@@ -13,18 +13,15 @@ import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.repository.Recent
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.entity.RecentTrack
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.entity.RecentTracks
 import javax.inject.Inject
-import javax.inject.Named
 
 class GetRecentTracks @Inject constructor(
-    private val recentTracksRepository: RecentTracksRepository,
-    @Named("user") private val user: String
+    private val recentTracksRepository: RecentTracksRepository
 ) {
 
     suspend fun execute(
         limit: Int = 15
     ): RecentTracks = withContext(Dispatchers.IO) {
         val (attrDto, tracksDto) = recentTracksRepository.getRecentTracks(
-            user = user,
             limit = limit
         ).recentTracks
 
