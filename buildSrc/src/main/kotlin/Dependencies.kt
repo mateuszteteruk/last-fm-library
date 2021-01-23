@@ -6,11 +6,18 @@ object Dependencies {
     const val gradlePlugin = "com.android.tools.build:gradle:4.0.1"
     const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin"
 
+    const val androidApplication = "com.android.application"
+    const val kotlinAndroid = "kotlin-android"
+    const val kotlinAndroidExtensions = "kotlin-android-extensions"
+    const val kotlinKapt = "kotlin-kapt"
+    const val hiltPlugin = "dagger.hilt.android.plugin"
+
     object AndroidSdk {
 
         const val compileSdk = 29
         const val minSdk = 23
         const val targetSdk = 29
+        const val buildToolsVersion = "30.0.2"
     }
 
     object Libraries {
