@@ -3,9 +3,10 @@
 
 You can find here Android app which main goal is to fetch data from Last.fm API and visualize them in pretty way.
 This is also playground and showcase of using some latest libraries from Android world, including (random order):
+- Gradle Kotlin
 - Hilt
 - Jetpack Compose
-- multi module architecture
+- Multi-module architecture
 - Coroutines
 - and a lot of 'default' ones, like Room, Retrofit etc.
 
