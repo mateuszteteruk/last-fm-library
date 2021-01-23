@@ -1,13 +1,10 @@
 object Dependencies {
 
     const val applicationId = "pl.mateuszteteruk.lastfmlibrary"
+
     const val kotlin = "1.4.20"
-
-    object Plugins {
-
-        const val gradlePlugin = "com.android.tools.build:gradle:4.0.1"
-        const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin"
-    }
+    const val gradlePlugin = "com.android.tools.build:gradle:4.0.1"
+    const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin"
 
     object AndroidSdk {
 
