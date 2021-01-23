@@ -6,11 +6,11 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import pl.mateuszteteruk.lastfmlibrary.core.dataaccess.api.RequestInterceptor
-import pl.mateuszteteruk.lastfmlibrary.recenttracks.dataaccess.api.RecentTracksService
-import pl.mateuszteteruk.lastfmlibrary.topalbums.dataaccess.api.TopAlbumsService
-import pl.mateuszteteruk.lastfmlibrary.topartists.dataaccess.api.TopArtistsService
-import pl.mateuszteteruk.lastfmlibrary.toptracks.dataaccess.api.TopTracksService
+import pl.mateuszteteruk.lastfmlibrary.core.data.api.RequestInterceptor
+import pl.mateuszteteruk.lastfmlibrary.recenttracks.data.api.RecentTracksService
+import pl.mateuszteteruk.lastfmlibrary.topalbums.data.api.TopAlbumsService
+import pl.mateuszteteruk.lastfmlibrary.topartists.data.api.TopArtistsService
+import pl.mateuszteteruk.lastfmlibrary.toptracks.data.api.TopTracksService
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
