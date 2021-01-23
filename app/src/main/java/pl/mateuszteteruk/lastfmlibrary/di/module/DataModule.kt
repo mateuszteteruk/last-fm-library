@@ -14,5 +14,5 @@ object DataModule {
     @Singleton
     @Provides
     @Named("user")
-    fun provideUserName(): String = ""
+    fun provideUserName(): String = "mttet"
 }
