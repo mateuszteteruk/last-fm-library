@@ -9,7 +9,7 @@ plugins {
 }
 
 fun loadLocalProperty(property: String): String {
-    return gradleLocalProperties(rootDir).getProperty(property)
+    return "\"${gradleLocalProperties(rootDir).getProperty(property)}\""
 }
 
 android {
