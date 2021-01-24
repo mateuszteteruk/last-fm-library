@@ -45,7 +45,7 @@ android {
 }
 
 dependencies {
-    implementation(project(mapOf("path" to ":core")))
+    implementation(project(mapOf("path" to ":core", "path" to ":recenttracks")))
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
@@ -67,6 +67,7 @@ dependencies {
     implementation(Dependencies.Libraries.Network.retrofit)
 
     implementation(Dependencies.Libraries.Hilt.hilt)
+    implementation(project(mapOf("path" to ":core")))
 
     kapt(Dependencies.Libraries.Network.moshiKotlinCodegen)
     kapt(Dependencies.Libraries.Hilt.compiler)

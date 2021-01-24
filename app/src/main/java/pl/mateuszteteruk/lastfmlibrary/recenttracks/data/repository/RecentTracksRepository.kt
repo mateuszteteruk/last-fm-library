@@ -1,8 +1,8 @@
 package pl.mateuszteteruk.lastfmlibrary.recenttracks.data.repository
 
 import pl.mateuszteteruk.core.domain.entity.RequestData
-import pl.mateuszteteruk.lastfmlibrary.recenttracks.data.api.RecentTracksService
-import pl.mateuszteteruk.lastfmlibrary.recenttracks.data.dto.RecentTrackWrapperDto
+import pl.mateuszteteruk.recenttracks.data.api.RecentTracksService
+import pl.mateuszteteruk.recenttracks.data.dto.RecentTrackWrapperDto
 import javax.inject.Inject
 import javax.inject.Named
 

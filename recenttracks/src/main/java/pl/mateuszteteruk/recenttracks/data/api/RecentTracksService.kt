@@ -1,6 +1,6 @@
-package pl.mateuszteteruk.lastfmlibrary.recenttracks.data.api
+package pl.mateuszteteruk.recenttracks.data.api
 
-import pl.mateuszteteruk.lastfmlibrary.recenttracks.data.dto.RecentTrackWrapperDto
+import pl.mateuszteteruk.recenttracks.data.dto.RecentTrackWrapperDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 

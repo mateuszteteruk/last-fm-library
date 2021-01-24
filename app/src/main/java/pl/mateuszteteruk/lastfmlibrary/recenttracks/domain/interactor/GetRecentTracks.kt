@@ -8,10 +8,10 @@ import pl.mateuszteteruk.core.domain.entity.Date
 import pl.mateuszteteruk.core.domain.entity.Image
 import pl.mateuszteteruk.core.domain.entity.RequestData
 import pl.mateuszteteruk.core.domain.interactor.BaseGetData
-import pl.mateuszteteruk.lastfmlibrary.recenttracks.data.dto.TrackDto
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.data.repository.RecentTracksRepository
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.domain.entity.RecentTrack
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.domain.entity.RecentTracks
+import pl.mateuszteteruk.recenttracks.data.dto.TrackDto
 import javax.inject.Inject
 
 class GetRecentTracks @Inject constructor(

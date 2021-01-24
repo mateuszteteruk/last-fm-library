@@ -41,4 +41,14 @@ dependencies {
     implementation(Dependencies.Libraries.AndroidX.core)
     implementation(Dependencies.Libraries.AndroidX.appcompat)
 
+    implementation(Dependencies.Libraries.timber)
+
+    implementation(Dependencies.Libraries.Network.retrofit)
+
+    implementation(Dependencies.Libraries.Network.moshi)
+    implementation(Dependencies.Libraries.Network.moshiConverter)
+    implementation(project(mapOf("path" to ":core")))
+
+    kapt(Dependencies.Libraries.Network.moshiKotlinCodegen)
+
 }
