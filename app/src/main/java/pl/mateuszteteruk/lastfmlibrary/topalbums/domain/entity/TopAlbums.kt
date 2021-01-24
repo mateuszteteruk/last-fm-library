@@ -1,6 +1,6 @@
 package pl.mateuszteteruk.lastfmlibrary.topalbums.domain.entity
 
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Description
+import pl.mateuszteteruk.core.domain.entity.Description
 
 data class TopAlbums(
     val description: Description,

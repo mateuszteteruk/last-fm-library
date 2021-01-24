@@ -2,7 +2,7 @@ package pl.mateuszteteruk.lastfmlibrary.toptracks.data.dto
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
-import pl.mateuszteteruk.lastfmlibrary.core.data.dto.AttrDto
+import pl.mateuszteteruk.core.data.dto.AttrDto
 
 @JsonClass(generateAdapter = true)
 data class TopTracksWrapperDto(

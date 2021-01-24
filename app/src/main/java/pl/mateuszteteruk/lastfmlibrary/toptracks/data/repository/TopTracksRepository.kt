@@ -1,6 +1,6 @@
 package pl.mateuszteteruk.lastfmlibrary.toptracks.data.repository
 
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.RequestData
+import pl.mateuszteteruk.core.domain.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.toptracks.data.api.TopTracksService
 import pl.mateuszteteruk.lastfmlibrary.toptracks.data.dto.TopTracksWrapperDto
 import javax.inject.Inject

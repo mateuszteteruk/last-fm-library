@@ -1,4 +1,4 @@
-package pl.mateuszteteruk.lastfmlibrary.core.domain.interactor
+package pl.mateuszteteruk.core.domain.interactor
 
 interface BaseInteractor<Input, Output> {
 

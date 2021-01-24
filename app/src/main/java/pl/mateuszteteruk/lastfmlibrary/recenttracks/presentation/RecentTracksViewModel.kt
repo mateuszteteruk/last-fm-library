@@ -3,7 +3,7 @@ package pl.mateuszteteruk.lastfmlibrary.recenttracks.presentation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.RequestData
+import pl.mateuszteteruk.core.domain.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.domain.entity.RecentTracks
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.domain.interactor.GetRecentTracks
 import timber.log.Timber

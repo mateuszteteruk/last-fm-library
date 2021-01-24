@@ -1,4 +1,4 @@
-package pl.mateuszteteruk.lastfmlibrary.core.data.dto
+package pl.mateuszteteruk.core.data.dto
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

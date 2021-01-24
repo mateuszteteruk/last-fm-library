@@ -3,8 +3,8 @@ package pl.mateuszteteruk.lastfmlibrary.toptracks.presentation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Period
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.RequestData
+import pl.mateuszteteruk.core.domain.entity.Period
+import pl.mateuszteteruk.core.domain.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.toptracks.domain.interactor.GetTopTracks
 import timber.log.Timber
 import javax.inject.Inject

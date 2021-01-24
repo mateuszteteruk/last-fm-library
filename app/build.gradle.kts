@@ -45,6 +45,8 @@ android {
 }
 
 dependencies {
+    implementation(project(mapOf("path" to ":core")))
+
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
     implementation(Dependencies.Libraries.kotlinStdLib)

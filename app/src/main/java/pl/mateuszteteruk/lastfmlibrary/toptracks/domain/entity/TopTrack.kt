@@ -1,7 +1,7 @@
 package pl.mateuszteteruk.lastfmlibrary.toptracks.domain.entity
 
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Artist
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Image
+import pl.mateuszteteruk.core.domain.entity.Artist
+import pl.mateuszteteruk.core.domain.entity.Image
 
 data class TopTrack(
     val rank: Int,

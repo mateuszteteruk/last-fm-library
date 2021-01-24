@@ -1,8 +1,8 @@
-package pl.mateuszteteruk.lastfmlibrary.core.domain.interactor
+package pl.mateuszteteruk.core.domain.interactor
 
-import pl.mateuszteteruk.lastfmlibrary.core.data.dto.AttrDto
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Description
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.RequestData
+import pl.mateuszteteruk.core.data.dto.AttrDto
+import pl.mateuszteteruk.core.domain.entity.Description
+import pl.mateuszteteruk.core.domain.entity.RequestData
 
 /**
  * Base interactor used to fetch data from Last.fm

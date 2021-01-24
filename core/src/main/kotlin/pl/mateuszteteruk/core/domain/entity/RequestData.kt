@@ -1,4 +1,4 @@
-package pl.mateuszteteruk.lastfmlibrary.core.domain.entity
+package pl.mateuszteteruk.core.domain.entity
 
 data class RequestData(
     val page: Int = 1,

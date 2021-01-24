@@ -1,6 +1,6 @@
 package pl.mateuszteteruk.lastfmlibrary.topartists.data.repository
 
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.RequestData
+import pl.mateuszteteruk.core.domain.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.topartists.data.api.TopArtistsService
 import pl.mateuszteteruk.lastfmlibrary.topartists.data.dto.TopArtistsWrapperDto
 import javax.inject.Inject

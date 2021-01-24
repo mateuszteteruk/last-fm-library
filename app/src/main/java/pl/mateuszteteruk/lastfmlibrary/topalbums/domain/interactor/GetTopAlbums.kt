@@ -2,10 +2,10 @@ package pl.mateuszteteruk.lastfmlibrary.topalbums.domain.interactor
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Artist
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Image
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.RequestData
-import pl.mateuszteteruk.lastfmlibrary.core.domain.interactor.BaseGetData
+import pl.mateuszteteruk.core.domain.entity.Artist
+import pl.mateuszteteruk.core.domain.entity.Image
+import pl.mateuszteteruk.core.domain.entity.RequestData
+import pl.mateuszteteruk.core.domain.interactor.BaseGetData
 import pl.mateuszteteruk.lastfmlibrary.topalbums.data.dto.TopAlbumDto
 import pl.mateuszteteruk.lastfmlibrary.topalbums.data.repository.TopAlbumsRepository
 import pl.mateuszteteruk.lastfmlibrary.topalbums.domain.entity.TopAlbum

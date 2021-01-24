@@ -3,7 +3,7 @@ package pl.mateuszteteruk.lastfmlibrary.topartists.presentation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.RequestData
+import pl.mateuszteteruk.core.domain.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.topartists.domain.interactor.GetTopArtists
 import timber.log.Timber
 import javax.inject.Inject

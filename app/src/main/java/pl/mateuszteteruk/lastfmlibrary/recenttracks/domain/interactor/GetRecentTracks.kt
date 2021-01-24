@@ -2,12 +2,12 @@ package pl.mateuszteteruk.lastfmlibrary.recenttracks.domain.interactor
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Album
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Artist
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Date
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Image
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.RequestData
-import pl.mateuszteteruk.lastfmlibrary.core.domain.interactor.BaseGetData
+import pl.mateuszteteruk.core.domain.entity.Album
+import pl.mateuszteteruk.core.domain.entity.Artist
+import pl.mateuszteteruk.core.domain.entity.Date
+import pl.mateuszteteruk.core.domain.entity.Image
+import pl.mateuszteteruk.core.domain.entity.RequestData
+import pl.mateuszteteruk.core.domain.interactor.BaseGetData
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.data.dto.TrackDto
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.data.repository.RecentTracksRepository
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.domain.entity.RecentTrack

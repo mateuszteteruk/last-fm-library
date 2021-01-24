@@ -1,4 +1,4 @@
-package pl.mateuszteteruk.lastfmlibrary.core.domain.entity
+package pl.mateuszteteruk.core.domain.entity
 
 enum class Period(val key: String) {
     Overall("overall"),

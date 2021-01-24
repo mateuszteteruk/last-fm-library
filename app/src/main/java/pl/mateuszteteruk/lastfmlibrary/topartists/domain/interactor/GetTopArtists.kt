@@ -2,9 +2,9 @@ package pl.mateuszteteruk.lastfmlibrary.topartists.domain.interactor
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.Image
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.RequestData
-import pl.mateuszteteruk.lastfmlibrary.core.domain.interactor.BaseGetData
+import pl.mateuszteteruk.core.domain.entity.Image
+import pl.mateuszteteruk.core.domain.entity.RequestData
+import pl.mateuszteteruk.core.domain.interactor.BaseGetData
 import pl.mateuszteteruk.lastfmlibrary.topartists.data.dto.TopArtistDto
 import pl.mateuszteteruk.lastfmlibrary.topartists.data.repository.TopArtistsRepository
 import pl.mateuszteteruk.lastfmlibrary.topartists.domain.entity.TopArtist

@@ -3,7 +3,7 @@ package pl.mateuszteteruk.lastfmlibrary.topalbums.presentation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import pl.mateuszteteruk.lastfmlibrary.core.domain.entity.RequestData
+import pl.mateuszteteruk.core.domain.entity.RequestData
 import pl.mateuszteteruk.lastfmlibrary.topalbums.domain.interactor.GetTopAlbums
 import timber.log.Timber
 import javax.inject.Inject
