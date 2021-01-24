@@ -7,6 +7,7 @@ object Dependencies {
     const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin"
 
     const val androidApplication = "com.android.application"
+    const val androidLibrary = "com.android.library"
     const val javaLibrary = "java-library"
     const val kotlinLibrary = "kotlin"
     const val kotlinAndroid = "kotlin-android"
