@@ -10,11 +10,15 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import pl.mateuszteteruk.recenttracks.R
 import pl.mateuszteteruk.recenttracks.di.provider.RecentTracksComponentProvider
+import javax.inject.Inject
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
 class SecondFragment : Fragment() {
+
+    @Inject
+    lateinit var viewModel: RecentTracksViewModel
 
     override fun onAttach(context: Context) {
         (context.applicationContext as RecentTracksComponentProvider)
@@ -37,5 +41,6 @@ class SecondFragment : Fragment() {
         view.findViewById<Button>(R.id.button_second).setOnClickListener {
             findNavController().popBackStack()
         }
+        viewModel.get()
     }
 }

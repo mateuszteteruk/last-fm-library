@@ -1,4 +1,4 @@
-package pl.mateuszteteruk.lastfmlibrary.recenttracks.data.repository
+package pl.mateuszteteruk.recenttracks.data.repository
 
 import pl.mateuszteteruk.core.domain.entity.RequestData
 import pl.mateuszteteruk.recenttracks.data.api.RecentTracksService

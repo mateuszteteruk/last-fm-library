@@ -6,14 +6,9 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-import pl.mateuszteteruk.lastfmlibrary.recenttracks.presentation.RecentTracksViewModel
 import timber.log.Timber
-import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
-
-    @Inject
-    lateinit var viewModel: RecentTracksViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         (applicationContext as AppController).applicationComponent.mainActivityComponent().create().inject(this)
@@ -26,7 +21,6 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
         Timber.d("Hello")
-        viewModel.get()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

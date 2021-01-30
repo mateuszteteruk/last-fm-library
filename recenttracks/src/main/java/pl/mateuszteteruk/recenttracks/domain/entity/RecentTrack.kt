@@ -1,4 +1,4 @@
-package pl.mateuszteteruk.lastfmlibrary.recenttracks.domain.entity
+package pl.mateuszteteruk.recenttracks.domain.entity
 
 import pl.mateuszteteruk.core.domain.entity.Album
 import pl.mateuszteteruk.core.domain.entity.Artist
