@@ -2,8 +2,6 @@ package pl.mateuszteteruk.lastfmlibrary.di.module
 
 import dagger.Module
 import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import pl.mateuszteteruk.lastfmlibrary.core.data.api.RequestInterceptor
@@ -16,7 +14,6 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
 @Module
-@InstallIn(ApplicationComponent::class)
 object NetworkModule {
 
     @Singleton

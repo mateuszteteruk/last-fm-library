@@ -5,7 +5,6 @@ plugins {
     id(Dependencies.kotlinAndroid)
     id(Dependencies.kotlinAndroidExtensions)
     id(Dependencies.kotlinKapt)
-    id(Dependencies.hiltPlugin)
 }
 
 fun loadLocalProperty(property: String): String {
@@ -66,9 +65,12 @@ dependencies {
     implementation(Dependencies.Libraries.Network.okhttpLoggingInterceptor)
     implementation(Dependencies.Libraries.Network.retrofit)
 
-    implementation(Dependencies.Libraries.Hilt.hilt)
     implementation(project(mapOf("path" to ":core")))
 
+    implementation(Dependencies.Libraries.Dagger.runtime)
+    implementation(Dependencies.Libraries.Dagger.androidSupport)
+    kapt(Dependencies.Libraries.Dagger.compiler)
+    kapt(Dependencies.Libraries.Dagger.androidProcessor)
+
     kapt(Dependencies.Libraries.Network.moshiKotlinCodegen)
-    kapt(Dependencies.Libraries.Hilt.compiler)
 }

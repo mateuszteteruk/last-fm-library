@@ -49,6 +49,11 @@ dependencies {
     implementation(Dependencies.Libraries.Network.moshiConverter)
     implementation(project(mapOf("path" to ":core")))
 
+    implementation(Dependencies.Libraries.Dagger.runtime)
+    implementation(Dependencies.Libraries.Dagger.androidSupport)
+    kapt(Dependencies.Libraries.Dagger.compiler)
+    kapt(Dependencies.Libraries.Dagger.androidProcessor)
+
     kapt(Dependencies.Libraries.Network.moshiKotlinCodegen)
 
 }

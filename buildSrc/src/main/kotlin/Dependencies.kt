@@ -13,7 +13,6 @@ object Dependencies {
     const val kotlinAndroid = "kotlin-android"
     const val kotlinAndroidExtensions = "kotlin-android-extensions"
     const val kotlinKapt = "kotlin-kapt"
-    const val hiltPlugin = "dagger.hilt.android.plugin"
 
     object AndroidSdk {
 
@@ -36,6 +35,7 @@ object Dependencies {
             const val retrofit = "2.9.0"
             const val okhttp = "4.9.0"
             const val hilt = "2.28-alpha"
+            const val dagger = "2.28.3"
         }
 
         const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:$kotlin"
@@ -63,11 +63,12 @@ object Dependencies {
             const val okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Version.okhttp}"
         }
 
-        object Hilt {
+        object Dagger {
 
-            const val hilt = "com.google.dagger:hilt-android:${Version.hilt}"
-            const val compiler = "com.google.dagger:hilt-android-compiler:${Version.hilt}"
-            const val plugin = "com.google.dagger:hilt-android-gradle-plugin:${Version.hilt}"
+            const val runtime = "com.google.dagger:dagger:${Version.dagger}"
+            const val compiler = "com.google.dagger:dagger-compiler:${Version.dagger}"
+            const val androidSupport = "com.google.dagger:dagger-android-support:${Version.dagger}"
+            const val androidProcessor = "com.google.dagger:dagger-android-processor:${Version.dagger}"
         }
 
     }

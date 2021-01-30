@@ -9,7 +9,6 @@ buildscript {
     dependencies {
         classpath(Dependencies.gradlePlugin)
         classpath(Dependencies.kotlinPlugin)
-        classpath(Dependencies.Libraries.Hilt.plugin)
     }
 }
 

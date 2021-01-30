@@ -3,16 +3,14 @@ package pl.mateuszteteruk.lastfmlibrary
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-import dagger.hilt.android.AndroidEntryPoint
+import dagger.android.support.DaggerAppCompatActivity
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.presentation.RecentTracksViewModel
 import timber.log.Timber
 import javax.inject.Inject
 
-@AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity() {
 
     @Inject
     lateinit var viewModel: RecentTracksViewModel
