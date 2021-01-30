@@ -3,8 +3,8 @@ package pl.mateuszteteruk.lastfmlibrary.di.module
 import android.content.Context
 import dagger.Module
 import dagger.Provides
+import pl.mateuszteteruk.core.di.scope.ApplicationContext
 import pl.mateuszteteruk.lastfmlibrary.AppController
-import pl.mateuszteteruk.lastfmlibrary.di.scope.ApplicationContext
 
 @Module
 abstract class ApplicationModule {

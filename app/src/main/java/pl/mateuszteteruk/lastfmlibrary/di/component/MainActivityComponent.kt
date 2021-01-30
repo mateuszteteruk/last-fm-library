@@ -1,8 +1,8 @@
 package pl.mateuszteteruk.lastfmlibrary.di.component
 
 import dagger.Subcomponent
+import pl.mateuszteteruk.core.di.scope.ActivityScope
 import pl.mateuszteteruk.lastfmlibrary.MainActivity
-import pl.mateuszteteruk.lastfmlibrary.di.scope.ActivityScope
 
 @Subcomponent
 @ActivityScope

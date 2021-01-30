@@ -11,6 +11,8 @@ dependencies {
     implementation(Dependencies.Libraries.Network.moshi)
     implementation(Dependencies.Libraries.Network.moshiConverter)
 
+    implementation("javax.inject:javax.inject:1")
+
     kapt(Dependencies.Libraries.Network.moshiKotlinCodegen)
 }
 
