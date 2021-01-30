@@ -40,6 +40,10 @@ dependencies {
     implementation(Dependencies.Libraries.kotlinStdLib)
     implementation(Dependencies.Libraries.AndroidX.core)
     implementation(Dependencies.Libraries.AndroidX.appcompat)
+    implementation(Dependencies.Libraries.AndroidX.material)
+    implementation(Dependencies.Libraries.AndroidX.constraint)
+    implementation(Dependencies.Libraries.AndroidX.navigationUi)
+    implementation(Dependencies.Libraries.AndroidX.navigationFragment)
 
     implementation(Dependencies.Libraries.timber)
 
