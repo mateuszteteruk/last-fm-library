@@ -9,7 +9,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import pl.mateuszteteruk.recenttracks.R
-import pl.mateuszteteruk.recenttracks.di.RecentTracksComponentProvider
+import pl.mateuszteteruk.recenttracks.di.provider.RecentTracksComponentProvider
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
