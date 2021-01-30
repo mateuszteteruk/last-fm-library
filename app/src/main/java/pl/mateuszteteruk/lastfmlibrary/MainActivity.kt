@@ -3,19 +3,20 @@ package pl.mateuszteteruk.lastfmlibrary
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-import dagger.android.support.DaggerAppCompatActivity
 import pl.mateuszteteruk.lastfmlibrary.recenttracks.presentation.RecentTracksViewModel
 import timber.log.Timber
 import javax.inject.Inject
 
-class MainActivity : DaggerAppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var viewModel: RecentTracksViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        (applicationContext as AppController).applicationComponent.mainActivityComponent().create().inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))

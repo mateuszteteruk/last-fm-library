@@ -67,8 +67,6 @@ object Dependencies {
 
             const val runtime = "com.google.dagger:dagger:${Version.dagger}"
             const val compiler = "com.google.dagger:dagger-compiler:${Version.dagger}"
-            const val androidSupport = "com.google.dagger:dagger-android-support:${Version.dagger}"
-            const val androidProcessor = "com.google.dagger:dagger-android-processor:${Version.dagger}"
         }
 
     }

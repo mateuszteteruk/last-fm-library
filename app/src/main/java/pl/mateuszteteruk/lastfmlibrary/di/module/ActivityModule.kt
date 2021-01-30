@@ -1,15 +1,11 @@
 package pl.mateuszteteruk.lastfmlibrary.di.module
 
 import dagger.Module
-import dagger.android.ContributesAndroidInjector
-import pl.mateuszteteruk.lastfmlibrary.MainActivity
-import pl.mateuszteteruk.lastfmlibrary.di.scope.ActivityScope
+import pl.mateuszteteruk.lastfmlibrary.di.component.MainActivityComponent
 
-@Module
-abstract class ActivityModule {
-
-    @ActivityScope
-    @ContributesAndroidInjector()
-    abstract fun contributesMainActivity(): MainActivity
-
-}
+@Module(
+    subcomponents = [
+        MainActivityComponent::class
+    ]
+)
+abstract class ActivityModule
