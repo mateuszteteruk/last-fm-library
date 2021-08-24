@@ -1,4 +1,8 @@
 # Last.fm Library
+
+## Archived
+Why? Last.fm is really unstable and doesn't fulfill my needs.
+
 ## What does this repo contain?
 
 You can find here Android app which main goal is to fetch data from Last.fm API and visualize them in pretty way.
